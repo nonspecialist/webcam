@@ -118,7 +118,7 @@ func (w *Webcam) SetImageFormat(f PixelFormat, width, height uint32) (PixelForma
 
 // Start streaming process
 func (w *Webcam) StartStreaming() error {
-	return StartStreaming(256)
+	return w.StartStreaming(256)
 }
 
 func (w *Webcam) StartStreaming(buf_count uint32) error {
