@@ -118,10 +118,10 @@ func (w *Webcam) SetImageFormat(f PixelFormat, width, height uint32) (PixelForma
 
 // Start streaming process
 func (w *Webcam) StartStreaming() error {
-	return w.StartStreaming(256)
+	return w.StartStreamingBufs(256)
 }
 
-func (w *Webcam) StartStreaming(buf_count uint32) error {
+func (w *Webcam) StartStreamingBufs(buf_count uint32) error {
 
 	err := mmapRequestBuffers(w.fd, &buf_count)
 
